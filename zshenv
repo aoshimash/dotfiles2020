@@ -1,0 +1,5 @@
+#export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+#export PATH="${HOME}/bin:$PATH"
+export EDITOR="emacs -nw"
+export VISUAL="emacs"
+export ELECTRON_TRASH="gio"
