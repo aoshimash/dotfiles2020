@@ -2,6 +2,7 @@ HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 
+fpath=(~/.zsh/completions $fpath) 
 autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -U vcs_info
