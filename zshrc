@@ -6,6 +6,8 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -U vcs_info
 
+source <(kubectl completion zsh)
+
 # Emacsモード（カーソル移動くらい？）
 bindkey -e
 
@@ -25,16 +27,17 @@ setopt SHARE_HISTORY
 setopt ignore_eof
 
 # alias設定
-alias ls='ls --color'
+#alias ls='ls --color' # for Linux
+alias ls='ls -G'  # for Mac
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 #alias elm-test='${HOME}/.nvm/versions/node/v10.1.0/lib/node_modules/elm-test/bin/elm-test'
 
-# nvm 設定
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source /usr/share/nvm/init-nvm.sh
+# nvm 設定  for Arch Linux
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#source /usr/share/nvm/init-nvm.sh
 
 # prompt設定
 setopt prompt_subst
@@ -44,7 +47,7 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+"
 zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-PROMPT=$'%B┌[%n@%{$fg[blue]%}%m%{${reset_color}%}%b%B] - [%~] - [%T] ${vcs_info_msg_0_}%b%B\n└[$%b%B]> %b'
+PROMPT=$'%B[%(?.$fg[green]%~.$fg[red]%~)${reset_color}] (%T) ${vcs_info_msg_0_}\n$ '
 
 # zplug設定
 source ${HOME}/.zplug/init.zsh
@@ -79,5 +82,5 @@ function _ssh {
   compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
 }
 
-source /usr/share/nvm/init-nvm.sh
-[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+#source /usr/share/nvm/init-nvm.sh
+#[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
