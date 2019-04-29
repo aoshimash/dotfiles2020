@@ -40,16 +40,6 @@ alias grep='grep --color=auto'
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #source /usr/share/nvm/init-nvm.sh
 
-# prompt設定
-setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{green}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+"
-zstyle ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () { vcs_info }
-PROMPT=$'%B[%(?.$fg[green]%~.$fg[red]%~)${reset_color}] (%T) ${vcs_info_msg_0_}\n$ '
-
 # zplug設定
 source ${HOME}/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
@@ -60,6 +50,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "rupa/z", use:"*.sh"
 zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 # インストールの必要があるときはインストールをする
 if ! zplug check; then
