@@ -8,6 +8,7 @@ autoload -U colors && colors
 autoload -U vcs_info
 
 source <(kubectl completion zsh)
+source <(kubesec completion zsh)
 
 # Emacsモード（カーソル移動くらい？）
 bindkey -e
