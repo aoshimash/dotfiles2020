@@ -9,6 +9,7 @@ autoload -U vcs_info
 
 source <(kubectl completion zsh)
 source <(kubesec completion zsh)
+source <(helm completion zsh)
 
 # Emacsモード（カーソル移動くらい？）
 bindkey -e
