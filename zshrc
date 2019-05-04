@@ -76,5 +76,5 @@ function _ssh {
   compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
 }
 
-#source /usr/share/nvm/init-nvm.sh
-#[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+# SPACESHIPのOption
+SPACESHIP_CHAR_SUFFIX=' '
