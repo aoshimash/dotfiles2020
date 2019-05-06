@@ -10,8 +10,8 @@ dotfiles
 ## Installing
 
 ```console
-$ git clone https://github.com/aoshimash/dotfiles ~/.dotfiles
+$ git clone --recursive https://github.com/aoshimash/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
-$ rcup
+$ rcup -v
 ```
 
