@@ -1,5 +1,8 @@
 #export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="${HOME}/bin:$PATH"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export EDITOR="emacs -nw"
 export VISUAL="emacs"
 export ELECTRON_TRASH="gio"
+export LDFLAGS="-L/usr/local/opt/mysql-client/lib"                                                                                                                                                                                                                            
+export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
