@@ -1,6 +1,7 @@
 #export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="${HOME}/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="${HOME}/opt/istio-1.1.8/bin:$PATH"
 export EDITOR="emacs -nw"
 export VISUAL="emacs"
 export ELECTRON_TRASH="gio"
