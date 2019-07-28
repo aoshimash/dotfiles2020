@@ -36,6 +36,10 @@ alias ls='ls -G'  # for Mac
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 #alias elm-test='${HOME}/.nvm/versions/node/v10.1.0/lib/node_modules/elm-test/bin/elm-test'
+alias k='kubectl'
+alias kns='kubens'
+alias kctx='kubectx'
+alias ksec='kubesec'
 
 # nvm 設定  for Arch Linux
 export NVM_DIR="$HOME/.nvm"
