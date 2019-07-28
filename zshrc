@@ -2,7 +2,7 @@ HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
 
-fpath=(~/.zsh/completions $fpath) 
+fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -U vcs_info
@@ -38,9 +38,9 @@ alias grep='grep --color=auto'
 #alias elm-test='${HOME}/.nvm/versions/node/v10.1.0/lib/node_modules/elm-test/bin/elm-test'
 
 # nvm 設定  for Arch Linux
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #source /usr/share/nvm/init-nvm.sh
 
 # zplug設定
