@@ -33,13 +33,14 @@ setopt ignore_eof
 # alias設定
 #alias ls='ls --color' # for Linux
 alias ls='ls -G'  # for Mac
-alias diff='diff --color=auto'
+#alias diff='diff --color=auto'  # for Linux only
 alias grep='grep --color=auto'
 #alias elm-test='${HOME}/.nvm/versions/node/v10.1.0/lib/node_modules/elm-test/bin/elm-test'
 alias k='kubectl'
 alias kns='kubens'
 alias kctx='kubectx'
 alias ksec='kubesec'
+alias wk='watch kubectl'
 
 # nvm 設定  for Arch Linux
 export NVM_DIR="$HOME/.nvm"
@@ -83,3 +84,5 @@ function _ssh {
 
 # SPACESHIPのOption
 SPACESHIP_CHAR_SUFFIX=' '
+
+PATH="$HOME_BIN:$MYSQL_CLIENT_BIN:$ISTIO_BIN:$PYENV_BIN:$PATH"
