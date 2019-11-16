@@ -37,8 +37,6 @@ alias ls='ls -G'  # for Mac
 alias grep='grep --color=auto'
 #alias elm-test='${HOME}/.nvm/versions/node/v10.1.0/lib/node_modules/elm-test/bin/elm-test'
 alias k='kubectl'
-alias kns='kubens'
-alias kctx='kubectx'
 alias ksec='kubesec'
 alias wk='watch kubectl'
 
