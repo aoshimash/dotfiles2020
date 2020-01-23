@@ -83,4 +83,10 @@ function _ssh {
 # SPACESHIPのOption
 SPACESHIP_CHAR_SUFFIX=' '
 
-PATH="$KREW_PATH:$HOME_BIN:$MYSQL_CLIENT_BIN:$ISTIO_BIN:$PYENV_BIN:$PATH"
+HOME_BIN="$HOME/bin"
+MYSQL_CLIENT_BIN="/usr/local/opt/mysql-client/bin"
+ISTIO_BIN="${HOME}/opt/istio-1.1.8/bin"
+PYENV_BIN="$(/usr/local/bin/pyenv root)/shims"
+KREW_PATH="${KREW_ROOT:-$HOME/.krew}/bin"
+CRWCTL_PATH="${HOME}/crwctl/bin"
+PATH="$KREW_PATH:$HOME_BIN:$MYSQL_CLIENT_BIN:$ISTIO_BIN:$PYENV_BIN:$CRWCTL_PATH:$PATH"
