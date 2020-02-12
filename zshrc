@@ -89,4 +89,7 @@ ISTIO_BIN="${HOME}/opt/istio-1.1.8/bin"
 PYENV_BIN="$(/usr/local/bin/pyenv root)/shims"
 KREW_PATH="${KREW_ROOT:-$HOME/.krew}/bin"
 CRWCTL_PATH="${HOME}/crwctl/bin"
-PATH="$KREW_PATH:$HOME_BIN:$MYSQL_CLIENT_BIN:$ISTIO_BIN:$PYENV_BIN:$CRWCTL_PATH:$PATH"
+POETRY_BIN="$HOME/.poetry/bin"
+
+typeset -U path
+path=($HOME_BIN $MYSQL_CLIENT_BIN $ISTIO_BIN $PYENV_BIN $KREW_PATH $CRWCTL_PATH $POETRY_BIN $path)
