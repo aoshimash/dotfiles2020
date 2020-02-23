@@ -93,3 +93,9 @@ POETRY_BIN="$HOME/.poetry/bin"
 
 typeset -U path
 path=($HOME_BIN $MYSQL_CLIENT_BIN $ISTIO_BIN $PYENV_BIN $KREW_PATH $CRWCTL_PATH $POETRY_BIN $path)
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/aoshima/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aoshima/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/aoshima/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aoshima/google-cloud-sdk/completion.zsh.inc'; fi
