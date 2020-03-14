@@ -85,7 +85,7 @@ SPACESHIP_CHAR_SUFFIX=' '
 
 HOME_BIN="$HOME/bin"
 MYSQL_CLIENT_BIN="/usr/local/opt/mysql-client/bin"
-ISTIO_BIN="${HOME}/opt/istio-1.1.8/bin"
+ISTIO_BIN="${HOME}/istio-1.5.0/bin"
 PYENV_BIN="$(/usr/local/bin/pyenv root)/shims"
 KREW_PATH="${KREW_ROOT:-$HOME/.krew}/bin"
 CRWCTL_PATH="${HOME}/crwctl/bin"
