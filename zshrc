@@ -89,10 +89,9 @@ ISTIO_BIN="${HOME}/istio-1.5.0/bin"
 PYENV_BIN="$(/usr/local/bin/pyenv root)/shims"
 KREW_PATH="${KREW_ROOT:-$HOME/.krew}/bin"
 CRWCTL_PATH="${HOME}/crwctl/bin"
-POETRY_BIN="$HOME/.poetry/bin"
 
 typeset -U path
-path=($HOME_BIN $MYSQL_CLIENT_BIN $ISTIO_BIN $PYENV_BIN $KREW_PATH $CRWCTL_PATH $POETRY_BIN $path)
+path=($HOME_BIN $MYSQL_CLIENT_BIN $ISTIO_BIN $PYENV_BIN $KREW_PATH $CRWCTL_PATH $path)
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/aoshima/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aoshima/google-cloud-sdk/path.zsh.inc'; fi
