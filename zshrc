@@ -83,18 +83,25 @@ function _ssh {
 # SPACESHIPのOption
 SPACESHIP_CHAR_SUFFIX=' '
 
-HOME_BIN="$HOME/bin"
-MYSQL_CLIENT_BIN="/usr/local/opt/mysql-client/bin"
-ISTIO_BIN="${HOME}/istio-1.5.0/bin"
-PYENV_BIN="$(/usr/local/bin/pyenv root)/shims"
-KREW_PATH="${KREW_ROOT:-$HOME/.krew}/bin"
-CRWCTL_PATH="${HOME}/crwctl/bin"
-
 typeset -U path
-path=($HOME_BIN $MYSQL_CLIENT_BIN $ISTIO_BIN $PYENV_BIN $KREW_PATH $CRWCTL_PATH $path)
+
+path=(
+  $HOME/bin
+  /usr/local/opt/mysql-client/bin
+  $HOME/istio-1.5.0/bin
+  $HOME/.krew/bin
+  $HOME/crwctl/bin
+  $HOME/.pyenv/bin
+  $path
+)
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/aoshima/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aoshima/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/aoshima/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aoshima/google-cloud-sdk/completion.zsh.inc'; fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+. $(brew --prefix asdf)/asdf.sh
